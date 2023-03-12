@@ -13,9 +13,16 @@ def draw_figure(side_count, side_size):
         t.fd(side_size)
         t.rt(angle)
 
-def main():
-    t.speed(1000)
+def draw_wheel():
+
+    for i in range(0, 45):
+        draw_figure(3, 100)
+        t.lt(8)
+        
+
+def draw_snail():
     turtle.bgcolor("black")
+    t.pencolor("yellow")
 
     colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 
@@ -30,5 +37,12 @@ def main():
         
         draw_figure(5, i)
         t.rt(10)
-        
+
+
+def main():
+    t.speed(1000)
+    
+
+    draw_wheel()
+            
 main()
